@@ -1,0 +1,21 @@
+/* universal selector */
+*{
+    font-family:'Times New Roman', Times, serif ;
+}
+
+/* element selector */
+h1{
+    color: red;
+    background-color: aqua;
+    display: flex;
+}
+
+/* id selector */
+#myId{
+    color: aquamarine;
+}
+
+/* class selector */
+.myClass{
+    color: bisque;
+}

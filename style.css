@@ -1,12 +1,13 @@
 *{
     margin: 0;
     font-family: Arial; 
-    border: border-box;
+    border: 0;
+    box-sizing: border-box;
 }
 
 /* Navbar styles */
 .navbar{
-    height: 100px;
+    height: 10vh;
     background-color: #0f1111;
     color:white;
     display: flex;
@@ -15,17 +16,13 @@
 }
 
 .nav-logo{
-    height: 100px;
-    width: 150px;
-    position: absolute;
-    left: 10px;
-}
-
-.logo{
-    height: 100%;
-    width: 100%;
     background-image: url(company-navbar-logo.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    left: 10px
 }
 
 .border{
@@ -40,7 +37,6 @@
     text-decoration: none;
     color: white;
     margin: 10px;
-    /* transition: all 0.3s ease-in-out; */
     transition: all 0.2s;
 }
 
@@ -52,16 +48,17 @@
 
 /* Hero styles */
 .hero-main{
-    height: 400px;
+    height: 80vh;
     display: flex;
     align-items: center;
 }
 
 .hero-img1{
     background-image: url(hero-img1.jpg);
-    background-size: cover;
-    height: 400px;
-    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
     text-align: left;
     animation: heroImgShow ease-in-out 1s 
 }
@@ -75,6 +72,31 @@
     }
 }
 
+.hero-text{
+    height: 100%;
+    width: 100%;
+    margin: 5%;
+    word-wrap: break-word;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
+.hero-text1{
+    letter-spacing: 0.5rem;
+    font-size: 200%;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.hero-text2{
+    text-indent: 20%;
+    
+    animation: 
+    3s linear heroTextShow,
+    1s linear slidein;
+    
+}
+
 @keyframes heroTextShow {
     from{
          opacity: 0;
@@ -82,28 +104,6 @@
     to{
          opacity: 100;
     }
-}
-
-.hero-text{
-    height: 400px;
-    width: 50%;
-}
-
-.hero-text1{
-    height: 100x;
-    width: 100%;
-    letter-spacing: 1rem;
-    font-size: 4rem;
-    font-family: sans-serif;
-    text-align: center;
-}
-
-.hero-text2{
-    position: relative;
-    text-indent: 50px;
-    animation: 1s linear slidein,
-    3s linear heroTextShow;
-    margin: 10px
 }
 
 @keyframes slidein {
@@ -117,22 +117,28 @@
 
 /* Footer styles */
 .footer{
-    height: 100px;
+    height: 10vh;
+    width: 100vw;
     background-color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .footer-address{
     height: 90%;
-    width: 220px;
+    width: 30vw;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 80%;
 }
 
 .footer-address i{
-    font-size: 35px;
+    font-size: 5vh;
+    margin: 5px;
 }
